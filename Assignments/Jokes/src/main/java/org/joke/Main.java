@@ -9,13 +9,12 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)
     {
         try {
-            WeatherDeatailAssign();
+            JokeDetails();
         }
         catch (URISyntaxException e)
         {
@@ -27,19 +26,9 @@ public class Main {
         }
     }
 
-    public static void WeatherDeatailAssign() throws IOException, URISyntaxException
+    public static void JokeDetails() throws IOException, URISyntaxException
     {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Please share your city name to get the weather forecast : ");
-        String city = scn.nextLine();
-
-        URIBuilder builder = new URIBuilder("http://api.weatherbit.io/v2.0/current");
-        builder.setParameter("key","9c214ffb70f54e90aefe0f6dcee2edad");
-        builder.setParameter("lat","35.7796");
-        builder.setParameter("lon","-78.6382");
-        builder.setParameter("include","minutely");
-        builder.setParameter("city",city);
-
+        URIBuilder builder = new URIBuilder("https://api.chucknorris.io/jokes/random");
 
         //Building url for Api call
         HttpGet getData = new HttpGet(builder.build());
