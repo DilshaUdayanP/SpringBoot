@@ -7,8 +7,6 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -17,9 +15,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
-        //System.out.println("Hello world!");
         try {
-            callWeatherForecastApi();
+            WeatherDeatailAssign();
         }
         catch (URISyntaxException e)
         {
@@ -31,18 +28,19 @@ public class Main {
         }
     }
 
-    public static void callWeatherForecastApi() throws IOException, URISyntaxException {
+    public static void WeatherDeatailAssign() throws IOException, URISyntaxException
+    {
         Scanner scn = new Scanner(System.in);
-        System.out.println("Please share your location for the weather forecast :");
-        String location = scn.nextLine();
+        System.out.println("Please share your city name to get the weather forecast : ");
+        String city = scn.nextLine();
 
-        URIBuilder builder = new URIBuilder("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast");
-        builder.setParameter("aggregateHours","24");
-        builder.setParameter("contentType","json");
-        builder.setParameter("unitGroup","metric");
-        builder.setParameter("locationMode","single");
-        builder.setParameter("locations",location);
-        builder.setParameter("key","1PYNQ6AWUDJE9AFERDCHJHSXK");
+        URIBuilder builder = new URIBuilder("http://api.weatherbit.io/v2.0/current");
+        builder.setParameter("key","9c214ffb70f54e90aefe0f6dcee2edad");
+        builder.setParameter("lat","35.7796");
+        builder.setParameter("lon","-78.6382");
+        builder.setParameter("include","minutely");
+        builder.setParameter("city",city);
+
 
         //Building url for Api call
         HttpGet getData = new HttpGet(builder.build());
@@ -65,21 +63,6 @@ public class Main {
             //convert JSON to String
             String result = EntityUtils.toString(responseEntity);
             System.out.println(result);
-
-            JSONObject responseObject = new JSONObject(result);
-            JSONObject locationObject =responseObject.getJSONObject("location");
-            JSONArray valueObject = locationObject.getJSONArray( "values");
-            System.out.println("datetimeStr \t mint \t maxt \t visibility \t humidity");
-            for(int i=0;i<valueObject.length();i++)
-            {
-                JSONObject value= valueObject.getJSONObject(1);
-                String dateTime = value.getString("datetimeStr");
-                Double minTemp= value.getDouble( "mint");
-                Double maxTemp= value.getDouble(  "maxt");
-                Double humidity = value.getDouble (  "humidity");
-                Double visibility= value.getDouble(  "visibility");
-                System.out.printf("%s %f %f %f %f \n", dateTime, minTemp, maxTemp, humidity, visibility);
-            }
         }
         else
         {
