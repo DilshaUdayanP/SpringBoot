@@ -1,15 +1,12 @@
 package com.example.EventDB.controller;
 
 import com.example.EventDB.model.EventModel;
-import com.example.EventDB.model.StudentModel;
 import com.example.EventDB.service.EventService;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/EventManage/")
+@RequestMapping("/api/EventManage/")
 public class EventController {
     //For Event model
 
@@ -27,7 +24,7 @@ public class EventController {
     }
 
     //Update event
-    @PutMapping("UpdateEvent")
+    @PutMapping("UpdateEvent/Id/{Id}")
     public  void UpdateEvent(@PathVariable int Id, @RequestBody EventModel event)
     {
         eventservice.UpdateEvent(Id,event);

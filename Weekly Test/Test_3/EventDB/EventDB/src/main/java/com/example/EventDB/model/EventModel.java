@@ -8,16 +8,16 @@ public class EventModel {
     private int eventId;
     private String eventName;
     private String locationOfEvent;
-    private LocalDate date;
-    private LocalTime startTime;
-    private LocalTime endTime;
+    private String date;
+    private String startTime;
+    private String endTime;
     private String imageurl;
 
     EventModel(){    }
 
     public EventModel(int eventId, String eventName,
-                      String location, LocalDate date, LocalTime StartTime,
-                      LocalTime EndTime, String ImgUrl)
+                      String location, String date, String StartTime,
+                      String EndTime, String ImgUrl)
     {
         this.eventId = eventId;
         this.eventName = eventName;
@@ -52,27 +52,27 @@ public class EventModel {
         this.locationOfEvent = locationOfEvent;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public LocalTime getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(LocalTime startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public LocalTime getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalTime endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 

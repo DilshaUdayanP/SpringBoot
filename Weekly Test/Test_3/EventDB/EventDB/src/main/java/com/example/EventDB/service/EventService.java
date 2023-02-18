@@ -19,14 +19,12 @@ public class EventService {
         //int eventId, String eventName,
         //               String location, Date date, String StartTime,
         //               String EndTime, String ImgUrl
-        Event.add(new EventModel(++EventCount,"Event_1","Location_1", LocalDate.now(), LocalTime.now(),LocalTime.parse("05:32:22",
-                DateTimeFormatter.ISO_TIME),""));
-        Event.add(new EventModel(++EventCount,"Event_2","Location_2", LocalDate.now(), LocalTime.now(),LocalTime.parse("05:32:22",
-                DateTimeFormatter.ISO_TIME),""));
-        Event.add(new EventModel(++EventCount,"Event_3","Location_3", LocalDate.now(), LocalTime.now(),LocalTime.parse("05:32:22",
-                DateTimeFormatter.ISO_TIME),""));
-        Event.add(new EventModel(++EventCount,"Event_4","Location_4", LocalDate.now(), LocalTime.now(),LocalTime.parse("05:32:22",
-                DateTimeFormatter.ISO_TIME),""));
+        Event.add(new EventModel(++EventCount,"Event_1","Location_1", "2023-11-11", "2:59:21.5864648","05:32:22",""));
+        Event.add(new EventModel(++EventCount,"Event_2","Location_2", "2023-11-11", "05:32:22","2:59:21.5864648",""));
+        Event.add(new EventModel(++EventCount,"Event_3","Location_3","2023-11-11", "05:32:22","2:59:21.5864648",""));
+        Event.add(new EventModel(++EventCount,"Event_4","Location_4", "2023-11-11", "2:59:21.5864648","05:32:22",""));
+        Event.add(new EventModel(1,"Event_5","Location_4", "2023-11-11", "2:59:21.5864648","05:32:22",""));
+        Event.add(new EventModel(1,"Event_6","Location_4","2023-11-11", "05:32:22","2:59:21.5864648",""));
     }
 
 //    public EventModel GetAllEvent(LocalDate date)

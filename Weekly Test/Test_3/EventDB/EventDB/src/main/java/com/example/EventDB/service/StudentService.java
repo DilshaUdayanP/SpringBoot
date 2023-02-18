@@ -1,6 +1,5 @@
 package com.example.EventDB.service;
 
-import com.example.EventDB.model.EventModel;
 import com.example.EventDB.model.StudentModel;
 import org.springframework.stereotype.Service;
 
