@@ -1,0 +1,14 @@
+package com.example.Query.Annotation;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class QueryAnnotationApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(QueryAnnotationApplication.class, args);
+		System.out.println("✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅");
+	}
+
+}
