@@ -8,7 +8,6 @@ public class QueryAnnotationApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(QueryAnnotationApplication.class, args);
-		System.out.println("✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅");
 	}
 
 }
