@@ -29,7 +29,7 @@ public class Main {
 
     public static void Zipopottam() throws IOException, URISyntaxException
     {
-        String url = "";
+        String url = "https://api.zippopotam.us/us/33162";
         URIBuilder builder = new URIBuilder(url);
 
         //Building url for Api call

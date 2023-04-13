@@ -29,7 +29,7 @@ public class Main {
 
     public static void NationalizeApi() throws IOException, URISyntaxException
     {
-        String url = "";
+        String url = "https://api.nationalize.io/?name=nathaniel";
         URIBuilder builder = new URIBuilder(url);
 
         //Building url for Api call
