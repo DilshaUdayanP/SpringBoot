@@ -2,16 +2,14 @@
 
 Starting : http://localhost:8080/
 
-Get all employee details : http://localhost:8080/employees
+Get all USER details : http://localhost:8080/users
 
-Get selected employee : http://localhost:8080/employee/{empNo}
+Get selected USER : http://localhost:8080/user/{userid}
 
-Create a employee : http://localhost:8080/employee_create
+Create a USER : http://localhost:8080/user_create
 
-Update a employee : http://localhost:8080/employee_edit/{empNo}
+Update a USER : http://localhost:8080/user_edit/{userid}
 
-Delete a employee : http://localhost:8080/employee_delete/{empNo}
-
-Send Mail : http://localhost:8080/sendMail
+Delete a USER : http://localhost:8080/user_delete/{userid}
 
 

@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    private UserService userservice;
+    private static UserService userservice;
 
     @RequestMapping("/")
     @ResponseBody
@@ -23,8 +23,8 @@ public class UserController {
             produces = { MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public List<User> getEmployees() {
-        List<User> list = userservice.getUser();
+    public List<User> getusers() {
+        List<User> list = userservice.getUsers();
         return list;
     }
 
@@ -33,7 +33,7 @@ public class UserController {
             produces = { MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public User getEmployee(@PathVariable("userid") String userid) {
+    public User getuser(@PathVariable("userid") String userid) {
         return userservice.getUser(userid);
     }
 
