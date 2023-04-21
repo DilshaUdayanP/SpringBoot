@@ -50,6 +50,7 @@ public class Employee_Email_DAO
     public void deleteEmployee(String empNo)
     {
         empMap.remove(empNo);
+        System.out.println("(Service Side) Deleting employee: " + empNo);
     }
     public static List<Employee> getAllEmployees()
     {

@@ -69,9 +69,6 @@ public class RestController {
             produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public void deleteEmployee(@PathVariable("empNo") String empNo) {
-
-        System.out.println("(Service Side) Deleting employee: " + empNo);
-
         employee_email_DAO.deleteEmployee(empNo);
     }
 
