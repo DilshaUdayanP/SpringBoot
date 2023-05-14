@@ -1,4 +1,4 @@
-package com.instagram.Instagram.Controller;
+package com.example.Instagram.Controller;
 
 import java.sql.Timestamp;
 

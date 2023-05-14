@@ -1,4 +1,4 @@
-package com.instagram.Instagram.Model;
+package com.example.Instagram.Model;
 
 import java.sql.Timestamp;
 
